@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Add master Job </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+<h1> Add Job </h1>
+<div>
+to:<input id="toInput" />
+from:<input id="fromInput" />
+start location:<input id="start" />
+end location:<input id="end" />
+cost per mile:<input id="cost" />
+<button onclick="enter()">Enter data </button>
+
+</div>
+
+
+
+
+<script>
+function enter () {
+	let data = {
+		"Arrive":toInput.value,
+		"Depart":fromInput.value,
+		"Location":start.value,
+		"End":end.value,
+		"Money":cost.value
+	}
+	$.get( "http://aa360-dashapp.mdizpnncq5.us-east-1.elasticbeanstalk.com/changeall", data, function( data ) {
+	  alert( "Data Loaded: " + data );
+	});
+}
+
+
+</script>
+
+
+
+</body>
+</html>

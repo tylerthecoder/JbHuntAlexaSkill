@@ -1,0 +1,16 @@
+{
+	"stations":[
+		{
+			loc:"russellville",
+			price:2.54
+		},
+		{
+			loc:"fayettville",
+			price:3.59
+		},
+		{
+			loc:"russellville",
+			price:3.00
+	]
+
+}
